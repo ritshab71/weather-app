@@ -1,0 +1,96 @@
+.dashboard-panel {
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
+}
+
+.current-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px;
+
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 6px;
+}
+
+.location {
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.34);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  min-width: 310px;
+  height: 400px;
+}
+
+.region .country {
+  font-size: 40px;
+  margin-top: 70px;
+}
+
+.region .region-name {
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+
+.weather {
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.34);
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  min-width: 310px;
+  height: 400px;
+}
+
+.weather .date {
+  margin-top: 35px;
+  font-size: 20px;
+}
+
+.weather .temperature {
+  font-size: 60px;
+}
+
+.weather .condition {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.additional-stats {
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.34);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid white;
+  color: white;
+  min-width: 310px;
+  height: 400px;
+}
+
+.additional-stats table {
+  padding: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+/* .additional-stats table {
+  color: white;
+  border: 1px solid white;
+  border-spacing: 5px;
+  border-collapse: collapse;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.additional-stats tr td {
+  padding: 10px;
+  color: white;
+  border: 1px solid white;
+  text-align: left;
+  border-radius: 5px;
+} */

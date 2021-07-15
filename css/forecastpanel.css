@@ -1,0 +1,29 @@
+.forecast-panel {
+  border-radius: 6px;
+
+  padding: 10px;
+  margin-bottom: 5px;
+  margin-left: 200px;
+  margin-right: 200px;
+  border: 2px solid white;
+}
+
+.forecast-header {
+  color: white;
+  text-align: center;
+}
+
+.three-day-forecast {
+  text-align: center;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.individual-day {
+  background-color: rgba(0, 0, 0, 0.34);
+  border: 1px solid white;
+  color: white;
+  float: left;
+  border-radius: 6px;
+  width: 33.33%;
+}

@@ -1,0 +1,107 @@
+<navigation-bar
+  weather="data"
+  farenheit="toggleF"
+  celcius="toggleC"
+></navigation-bar>
+
+<div class="dashboard-panel">
+  <div class="current-panel">
+    <div class="location">
+      <div class="region">
+        <p class="country">{{ location.country }}</p>
+        <p class="region-name">{{ location.name }}</p>
+        <table class="table table-hover">
+          <tr>
+            <td>
+              Sunrise
+            </td>
+            <td>
+              {{ today.astro.sunrise }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sunset
+            </td>
+            <td>
+              {{ today.astro.sunset }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="weather">
+      <p class="date">
+        {{ location.localtime_epoch * 1000 | date:"EEEE, d'th' MMMM" }}
+      </p>
+      <p class="temperature">
+        {{ scale==='c' ? current.temp_c + ' °C' : current.temp_f + ' °F' }}
+      </p>
+      <span>Feels like:</span>
+      <span
+        >{{ scale==='c' ? current.feelslike_c + ' °C' : current.feelslike_f + '
+        °F' }}</span
+      >
+      <p class="condition">{{ current.condition.text }}</p>
+      <img class="weather-icon" src="{{ current.condition.icon }}" />
+    </div>
+    <div class="additional-stats">
+      <table class="table table-hover">
+        <tr>
+          <td>Max</td>
+          <td>
+            {{ scale==='c' ? today.day.maxtemp_c + ' °C' : today.day.maxtemp_f +
+            ' °F' }}
+          </td>
+        </tr>
+        <tr>
+          <td>Min</td>
+          <td>
+            {{ scale==='c' ? today.day.mintemp_c + ' °C' : today.day.mintemp_f +
+            ' °F' }}
+          </td>
+        </tr>
+        <tr>
+          <td>Average</td>
+          <td>
+            {{ scale==='c' ? today.day.avgtemp_c + ' °C' : today.day.avgtemp_f +
+            ' °F' }}
+          </td>
+        </tr>
+        <tr>
+          <td>Wind</td>
+          <td>
+            {{ current.wind_kph }} km/h {{ current.wind_degree }}° {{
+            current.wind_dir }}
+          </td>
+        </tr>
+        <tr>
+          <td>Rain</td>
+          <td>{{ today.day.daily_chance_of_rain }}%</td>
+        </tr>
+        <tr>
+          <td>Precipitation</td>
+          <td>{{ current.precip_mm }} mm</td>
+        </tr>
+        <tr>
+          <td>Humidity</td>
+          <td>{{ current.humidity }}%</td>
+        </tr>
+        <tr>
+          <td>UV Index</td>
+          <td>{{ current.uv }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="forecast-panel">
+    <h5 class="forecast-header">Forecast</h5>
+    <div class="three-day-forecast" ng-repeat="forecast in forecasts">
+      <individual-forecast
+        scale="scale"
+        forecast="forecast"
+      ></individual-forecast>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="individual-day">
+  <p>{{ forecast.date_epoch * 1000 | date:"EEEE, d'th' MMMM" }}</p>
+  <p class="temperature">
+    {{ scale==='c' ? forecast.day.maxtemp_c + ' °C' : forecast.day.maxtemp_f + '
+    °F' }}
+  </p>
+  <p class="temperature">
+    {{ scale==='c' ? forecast.day.mintemp_c + ' °C' : forecast.day.mintemp_f + '
+    °F' }}
+  </p>
+  <p class="forecast-condition">{{ forecast.day.condition.text }}</p>
+  <img class="weather-icon" src="{{ forecast.day.condition.icon }}" />
+</div>
