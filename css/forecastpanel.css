@@ -1,5 +1,6 @@
 .forecast-panel {
   border-radius: 6px;
+
   padding: 10px;
   margin-bottom: 5px;
   margin-left: 200px;
@@ -11,6 +12,8 @@
 .forecast-header {
   color: white;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.34);
+  border-radius: 6px;
 }
 
 .three-day-forecast {
@@ -28,8 +31,16 @@
   width: 33.33%;
 }
 
+.individual-day:hover {
+  background-color: rgba(30, 115, 184, 0.555);
+  border: 1px solid white;
+  color: white;
+  float: left;
+  border-radius: 6px;
+  width: 33.33%;
+}
+
 .individual-day button {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
