@@ -15,13 +15,27 @@
   font-family: "Poppins", sans-serif;
 }
 
-html,
 body {
   min-height: 100%;
   margin: 0;
-  background-image: url("../img/sunrise.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+.body-rise {
+  background-image: url("../img/sunrise.png");
+}
+
+.body-day {
+  background-image: url("../img/day.png");
+}
+
+.body-set {
+  background-image: url("../img/sunset.png");
+}
+
+.body-night {
+  background-image: url("../img/night.png");
 }

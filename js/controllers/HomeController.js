@@ -10,6 +10,21 @@ app.controller("HomeController", [
       $scope.today = $scope.forecasts[0];
     });
 
+    $scope.date = new Date().getHours();
+
+    if (
+      ($scope.date >= 18 && $scope.date <= 23) ||
+      ($scope.date >= 0 && $scope.date <= 5)
+    ) {
+      document.body.className = "body-night";
+    } else if ($scope.date >= 6 && $scope.date <= 7) {
+      document.body.className = "body-rise";
+    } else if ($scope.date >= 8 && $scope.date <= 15) {
+      document.body.className = "body-day";
+    } else if ($scope.date >= 16 && $scope.date <= 17) {
+      document.body.className = "body-set";
+    }
+
     $scope.scale = weather.getToggle();
 
     $scope.toggleC = function() {

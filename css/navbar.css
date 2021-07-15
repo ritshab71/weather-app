@@ -1,3 +1,8 @@
+.nav-link:hover {
+  background-color: rgba(68, 96, 221, 0.582);
+  border-radius: 6px;
+}
+
 .toggleCF {
   position: absolute;
   right: 10px;
