@@ -1,0 +1,122 @@
+<navigation-bar
+  weather="data"
+  type="scale"
+  farenheit="toggleF"
+  celcius="toggleC"
+></navigation-bar>
+
+<div class="day-panel">
+  <div class="day-stats">
+    <p class="date">{{daycast.date_epoch * 1000 | date:"EEEE, d'th' MMMM"}}</p>
+    <span class="condition">{{daycast.day.condition.text}}</span>
+    <img src="{{daycast.day.condition.icon}}" />
+    <p class="sun-stats">
+      Sunrise: {{daycast.astro.sunrise}} | Sunset: {{daycast.astro.sunset}}
+    </p>
+
+    <table class="table table-hover">
+      <tr>
+        <td>Max</td>
+        <td>
+          {{ scale==='c' ? daycast.day.maxtemp_c + ' °C' : daycast.day.maxtemp_f
+          + ' °F' }}
+        </td>
+      </tr>
+      <tr>
+        <td>Min</td>
+        <td>
+          {{ scale==='c' ? daycast.day.mintemp_c + ' °C' : daycast.day.mintemp_f
+          + ' °F' }}
+        </td>
+      </tr>
+      <tr>
+        <td>Average</td>
+        <td>
+          {{ scale==='c' ? daycast.day.avgtemp_c + ' °C' : daycast.day.avgtemp_f
+          + ' °F' }}
+        </td>
+      </tr>
+      <tr>
+        <td>Max Wind</td>
+        <td>
+          {{ daycast.day.maxwind_kph }} km/h
+        </td>
+      </tr>
+      <tr>
+        <td>Rain</td>
+        <td>{{ daycast.day.daily_chance_of_rain }}%</td>
+      </tr>
+      <tr>
+        <td>Total Precipitation</td>
+        <td>{{ daycast.day.totalprecip_mm }} mm</td>
+      </tr>
+      <tr>
+        <td>Average Humidity</td>
+        <td>{{ daycast.day.avghumidity }}%</td>
+      </tr>
+      <tr>
+        <td>UV Index</td>
+        <td>{{ daycast.day.uv }}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="hourly-cast">
+    <h5>Hourly Cast</h5>
+    <ul class="hour" ng-repeat="hour in hourly">
+      <button class="btn" ng-click="toggleHourlyInfo($index)">
+        <p class="time">{{ hour.time_epoch * 1000 | date:"h:mm a" }}</p>
+        <p class="temperature">
+          {{ scale==='c' ? hour.temp_c + ' °C' : hour.temp_f + ' °F' }}
+        </p>
+        <p class="condition">{{ hour.condition.text }}</p>
+        <img class="weather-icon" src="{{ hour.condition.icon }}" />
+      </button>
+    </ul>
+  </div>
+  <div class="hourly-stats" ng-show="showHourInfo">
+    <p class="time">{{selectedHour.time_epoch * 1000 | date:"h:mm a"}}</p>
+    <p class="temperature">
+      {{ scale==='c' ? selectedHour.temp_c + ' °C' : selectedHour.temp_f + ' °F'
+      }}
+    </p>
+    <p class="feels-like">
+      Feels like: {{ scale==='c' ? selectedHour.feelslike_c + ' °C' :
+      selectedHour.feelslike_f + ' °F' }}
+    </p>
+    <p class="condition">{{selectedHour.condition.text}}</p>
+    <img src="{{selectedHour.condition.icon}}" />
+    <table class="table table-hover">
+      <tr>
+        <td>Wind</td>
+        <td>
+          {{selectedHour.wind_kph}} km/h {{selectedHour.wind_degree}}°
+          {{selectedHour.wind_dir}}
+        </td>
+      </tr>
+      <tr>
+        <td>Pressure</td>
+        <td>{{selectedHour.pressure_mb}} mb</td>
+      </tr>
+      <tr>
+        <td>Precipitation</td>
+        <td>{{selectedHour.precip_mm}} mm</td>
+      </tr>
+      <tr>
+        <td>Humidity</td>
+        <td>{{selectedHour.humidity}}%</td>
+      </tr>
+      <tr>
+        <td>Rain</td>
+        <td>{{selectedHour.chance_of_rain}}%</td>
+      </tr>
+      <tr>
+        <td>UV Index</td>
+        <td>{{selectedHour.uv}}</td>
+      </tr>
+    </table>
+
+    <button class="btn btn-info btn-sm" ng-click="closeHourlyInfo()">
+      Close
+    </button>
+  </div>
+</div>

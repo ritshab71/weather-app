@@ -3,6 +3,7 @@ app.directive("navigationBar", function() {
     restrict: "E",
     scope: {
       weather: "=",
+      type: '=',
       farenheit: "=",
       celcius: "="
     },

@@ -7,7 +7,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 10px;
-
   margin-left: 50px;
   margin-right: 50px;
   border-radius: 6px;
@@ -33,6 +32,10 @@
 .region .region-name {
   font-size: 30px;
   margin-bottom: 70px;
+}
+
+.region table {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .weather {
@@ -75,22 +78,7 @@
 .additional-stats table {
   padding: 5px;
   font-size: 15px;
-  margin-top: 10px;
+  margin-top: 5px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 }
-
-/* .additional-stats table {
-  color: white;
-  border: 1px solid white;
-  border-spacing: 5px;
-  border-collapse: collapse;
-  border-radius: 5px;
-  margin: 0 auto;
-}
-
-.additional-stats tr td {
-  padding: 10px;
-  color: white;
-  border: 1px solid white;
-  text-align: left;
-  border-radius: 5px;
-} */

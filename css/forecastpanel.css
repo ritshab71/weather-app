@@ -1,11 +1,11 @@
 .forecast-panel {
   border-radius: 6px;
-
   padding: 10px;
   margin-bottom: 5px;
   margin-left: 200px;
   margin-right: 200px;
   border: 2px solid white;
+  min-width: 720px;
 }
 
 .forecast-header {
@@ -27,3 +27,9 @@
   border-radius: 6px;
   width: 33.33%;
 }
+
+.individual-day button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+

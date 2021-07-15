@@ -8,10 +8,10 @@ app.config([
         controller: "HomeController",
         templateUrl: "views/home.html"
       })
-      // .when("/weather-display/:day_id", {
-      //   controller: "ForecastController",
-      //   templateUrl: "views/forecast.html"
-      // })
+      .when("/weather-display/:day_id", {
+        controller: "ForecastController",
+        templateUrl: "views/daycast.html"
+      })
       .otherwise({
         redirectTo: "/"
       });

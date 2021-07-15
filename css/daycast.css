@@ -1,0 +1,119 @@
+.day-panel {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 2fr;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.day-stats {
+  background-color: rgba(0, 0, 0, 0.34);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  height: 680px;
+  min-width: 400px;
+}
+
+.day-stats .date {
+  margin-top: 35px;
+  font-size: 30px;
+}
+
+.day-stats .condition {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.day-stats .sun-stats {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.day-stats table {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.hourly-cast {
+  background-color: rgba(0, 0, 0, 0.34);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  overflow-y: scroll;
+  height: 680px;
+  min-width: 250px;
+}
+
+.hourly-cast button {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+  min-width: 200px;
+}
+
+.hourly-cast button:hover {
+  width: 100%;
+  background-color: rgba(30, 115, 184, 0.555);
+  color: white;
+}
+
+.hourly-cast .time {
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.342);
+  border-radius: 6px;
+}
+
+.hourly-cast .temperature {
+  font-size: 25px;
+}
+
+.hourly-stats {
+  background-color: rgba(0, 0, 0, 0.34);
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 6px;
+  color: white;
+  text-align: center;
+  height: 680px;
+  min-width: 350px;
+}
+
+.hourly-stats .time {
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+
+.hourly-stats .temperature {
+  font-size: 50px;
+}
+
+.hourly-stats .feels-like {
+  font-size: 15px;
+}
+
+.hourly-stats .condition {
+  font-size: 20px;
+}
+
+.hourly-stats img {
+  margin-bottom: 42px;
+}
+
+.hourly-stats table {
+  font-size: 15px;
+}
+
+.hourly-stats td {
+  background-color: rgba(0, 0, 0, 0.25);
+}

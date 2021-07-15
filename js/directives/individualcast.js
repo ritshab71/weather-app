@@ -3,7 +3,8 @@ app.directive("individualForecast", function() {
     restrict: "E",
     scope: {
       scale: "=",
-      forecast: "="
+      forecast: "=",
+      index: "="
     },
     templateUrl: "views/forecast.html"
   };
