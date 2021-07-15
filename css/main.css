@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+
 * {
   padding: 0;
   list-style: none;
@@ -16,4 +25,3 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-
