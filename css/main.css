@@ -1,3 +1,11 @@
+/*
+main.css - contains css for html, body
+*/
+
+/*
+"poppins" font used from:
+"https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap""https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 [ng\:cloak],
@@ -24,6 +32,12 @@ body {
   background-attachment: fixed;
 }
 
+/* 
+"sunrise.png" image used from:
+https://www.behance.net/gallery/54151487/Sunrise-Illustration
+
+other images used are an edited version of the above image
+*/
 .body-rise {
   background-image: url("../img/sunrise.png");
 }

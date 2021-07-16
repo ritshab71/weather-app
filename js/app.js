@@ -1,5 +1,9 @@
+// app.js - app module for "WeatherApp"
+
 var app = angular.module("WeatherApp", ["ngRoute"]);
 
+// Routing is provided so that the selected forecast day (by day_id) information can be displayed
+// in a seperate page
 app.config([
   "$routeProvider",
   function($routeProvider) {

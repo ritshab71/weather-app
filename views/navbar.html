@@ -1,7 +1,11 @@
+<!-- navbar.html - displays a bootstrap navigation bar including a button to home, 
+basic weather and location information and the celcius/farenheit toggle button-->
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
+        <!-- links back to the index home page -->
         <a class="nav-link" href="/index.html#/">Home</a>
       </li>
     </ul>
@@ -15,6 +19,8 @@
   <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
+        <!-- when either toggleC/toggleF are clicked, it runs the scope functions
+        from the controller currently being used which were passed in the directive-->
         <div class="toggleCF">
           <button class="toggleC" ng-click="celcius()">C</button>
           <button class="toggleF" ng-click="farenheit()">F</button>

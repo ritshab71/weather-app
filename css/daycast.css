@@ -1,3 +1,7 @@
+/*
+currentpanel.css - contains css for the selected forecast day's weather, including hourly cast
+*/
+
 .day-panel {
   display: grid;
   grid-template-columns: 3fr 1.5fr 2fr;
@@ -55,7 +59,7 @@
 .hourly-cast button {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
-    color: white;
+  color: white;
   min-width: 200px;
 }
 
@@ -91,7 +95,7 @@
 .hourly-stats .time {
   font-size: 20px;
   background-color: rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
+  border-radius: 6px;
 }
 
 .hourly-stats .temperature {

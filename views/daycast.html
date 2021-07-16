@@ -1,3 +1,8 @@
+<!-- daycast.html - displays the selected day's weather information, 
+including overall weather, hourly cast and hourly info-->
+
+<!-- navigation bar directive that uses the data from the API result data and
+the selected scale to toggle celcius/farenheit when required -->
 <navigation-bar
   weather="data"
   type="scale"
@@ -13,7 +18,7 @@
     <p class="sun-stats">
       Sunrise: {{daycast.astro.sunrise}} | Sunset: {{daycast.astro.sunset}}
     </p>
-
+    <!-- displays a table of the day's overall weather and statistics -->
     <table class="table table-hover">
       <tr>
         <td>Max</td>
@@ -62,6 +67,9 @@
   </div>
   <div class="hourly-cast">
     <h5>Hourly Cast</h5>
+    <!-- for each hour in the hourly cast of the day, a button is created showing simple
+    data for the hour, with the option that when clicked, "toggleHourlyInfo($index)" 
+    would display more detailed information pertaining to the hour selected-->
     <ul class="hour" ng-repeat="hour in hourly">
       <button class="btn" ng-click="toggleHourlyInfo($index)">
         <p class="time">{{ hour.time_epoch * 1000 | date:"h:mm a" }}</p>
@@ -73,6 +81,8 @@
       </button>
     </ul>
   </div>
+  <!-- if toggleHourlyInfo($index) is clicked, this div will display for
+  the specific $index (hour) in the hourly cast-->
   <div class="hourly-stats" ng-show="showHourInfo">
     <p class="time">{{selectedHour.time_epoch * 1000 | date:"h:mm a"}}</p>
     <p class="temperature">
@@ -115,6 +125,7 @@
       </tr>
     </table>
 
+    <!-- button that closes the displayed div -->
     <button class="btn btn-info btn-sm" ng-click="closeHourlyInfo()">
       Close
     </button>

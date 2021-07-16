@@ -1,4 +1,8 @@
+<!-- forecast.html - displays the forecast basic weather information-->
+
 <div class="individual-day">
+  <!-- button that routes to "#/weather-display/$index", where
+  $index (whole integer) references the selected day the user has clicked-->
   <a href="#/weather-display/{{index}}">
     <button type="button" class="btn btn-info">
       {{ forecast.date_epoch * 1000 | date:"EEEE, d'th' MMMM" }}

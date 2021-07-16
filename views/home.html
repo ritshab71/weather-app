@@ -1,3 +1,8 @@
+<!-- home.html - displays the current day's weather and uses the "individual-forecast"
+directive to also display the current day and 2 day forecast-->
+
+<!-- navigation bar directive that uses the data from the API result data and
+the selected scale to toggle celcius/farenheit when required -->
 <navigation-bar
   weather="data"
   type="scale"
@@ -98,6 +103,9 @@
 
   <div class="forecast-panel">
     <h5 class="forecast-header">Forecast</h5>
+    <!-- for each forecast day from the forecasts API json data, the
+    individual forecast day is displayed by feeding the forecast information
+    into the "individual-forecast" directive -->
     <div class="three-day-forecast" ng-repeat="forecast in forecasts">
       <individual-forecast
         scale="scale"
