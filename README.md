@@ -1,7 +1,7 @@
 # weather-app
 
 # Description:
-Basic Weather App that detect's the user's location by IP and displays the current weather as well as the forecast for the current day and the next 2 days. This forecast provides and hourly outlook on the day, and provides relevant detailed weather statistics for the basic user.
+Basic Weather App that detect's the user's location by IP and displays the current weather as well as the forecast for the current day and the next 2 days. This forecast provides an hourly outlook on the day, and provides relevant detailed weather statistics for the basic user.
 
 
 # Functionality:
