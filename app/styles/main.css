@@ -39,17 +39,17 @@ https://www.behance.net/gallery/54151487/Sunrise-Illustration
 other images used are an edited version of the above image
 */
 .body-rise {
-  background-image: url("../img/sunrise.png");
+  background-image: url("../images/sunrise.png");
 }
 
 .body-day {
-  background-image: url("../img/day.png");
+  background-image: url("../images/day.png");
 }
 
 .body-set {
-  background-image: url("../img/sunset.png");
+  background-image: url("../images/sunset.png");
 }
 
 .body-night {
-  background-image: url("../img/night.png");
+  background-image: url("../images/night.png");
 }
