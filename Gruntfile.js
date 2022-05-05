@@ -31,27 +31,6 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-    buildcontrol: {
-        options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-        },
-        pages: {
-          options: {
-            remote: 'git@github.com:ritshab71/weather-app.git',
-            branch: 'gh-pages'
-          }
-        },
-        local: {
-          options: {
-            remote: '../',
-            branch: 'master'
-          }
-        }
-      },
-
     // Project settings
     yeoman: appConfig,
 
@@ -447,7 +426,28 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
+    },
+
+    buildcontrol: {
+        options: {
+          dir: 'dist',
+          commit: true,
+          push: true,
+          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+        },
+        pages: {
+          options: {
+            remote: 'git@github.com:ritshab71/weather-app.git',
+            branch: 'gh-pages'
+          }
+        },
+        local: {
+          options: {
+            remote: '../',
+            branch: 'master'
+          }
+        }
+      },
   });
 
 
